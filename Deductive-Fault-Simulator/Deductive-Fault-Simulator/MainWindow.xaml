@@ -5,9 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Deductive_Fault_Simulator"
         mc:Ignorable="d"
-        Title="Deductive Fault Simulator" Height="350" Width="525" WindowStartupLocation="CenterScreen"
-        WindowStyle="SingleBorderWindow">
-    <Grid>
-        
-    </Grid>
+        Title="Deductive Fault Simulator" WindowStartupLocation="CenterScreen"
+        WindowStyle="ThreeDBorderWindow" ResizeMode="CanMinimize">
+    <Border BorderBrush="Black" BorderThickness="1" CornerRadius="2" Margin="5">
+        <StackPanel Orientation="Horizontal">
+            <Border>
+                <StackPanel Orientation="Vertical">
+                    <Border Background="Gray" Margin="2" CornerRadius="2" Height="25" Width="700">
+                        <TextBlock Text="INPUT FILE" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="TimesNewRoman" FontStyle="Italic" />
+                    </Border>
+
+                    <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="2" Margin="2" Width="700" Height="30">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox Margin="2" Width="625" Name="FileNameTextBox" ></TextBox>
+                            <Button Margin="2" Width="65" Content="..." Click="BrowseButton_Click"></Button>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Background="Gray" Margin="2" CornerRadius="2" Height="25" Width="700">
+                        <TextBlock Text="CONTENTS OF THE FILE" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="TimesNewRoman" FontStyle="Italic" />
+                    </Border>
+
+                    <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="2" Margin="2" Width="700" Height="260">
+                        <TextBox HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" 
+                                 Margin="2" Width="690" Height="300" TextWrapping="Wrap" Name="FileContentsDisplayBox" >
+                        </TextBox>
+                    </Border>
+                </StackPanel>
+            </Border>
+
+            <Border>
+                
+            </Border>
+        </StackPanel>
+    </Border>
 </Window>
