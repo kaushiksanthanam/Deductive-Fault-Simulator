@@ -1,4 +1,6 @@
-﻿using Microsoft.Win32;
+﻿using Deductive_Fault_Simulator_BusinessLogic;
+using Microsoft.Win32;
+using System.Collections.Generic;
 using System.IO;
 using System.Windows;
 
@@ -10,6 +12,13 @@ namespace Deductive_Fault_Simulator
     public partial class MainWindow : Window
     {
         #region Variables
+
+        public List<int> inputs;
+        public List<int> outputs;
+        public List<LogicRecord> logicRecords;
+        public List<string> outputFormula;
+
+        Dictionary<int, int> inputSignalsDict;
 
         #endregion
 
@@ -59,6 +68,18 @@ namespace Deductive_Fault_Simulator
             }
         }
 
+        /// <summary>
+        /// Event Handler for when the RUN button is clicked to
+        /// run the input string on the logic ciruit
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RunButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
         #endregion
+
     }
 }

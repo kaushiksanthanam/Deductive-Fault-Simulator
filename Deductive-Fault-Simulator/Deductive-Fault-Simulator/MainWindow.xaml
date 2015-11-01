@@ -11,10 +11,10 @@
         <StackPanel Orientation="Horizontal">
             <Border>
                 <StackPanel Orientation="Vertical">
+                    <!--Input File Area-->
                     <Border Background="Gray" Margin="2" CornerRadius="2" Height="25" Width="700">
                         <TextBlock Text="INPUT FILE" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="TimesNewRoman" FontStyle="Italic" />
                     </Border>
-
                     <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="2" Margin="2" Width="700" Height="30">
                         <StackPanel Orientation="Horizontal">
                             <TextBox Margin="2" Width="625" Name="FileNameTextBox" ></TextBox>
@@ -22,20 +22,42 @@
                         </StackPanel>
                     </Border>
 
+                    <!--File Contents Display Area-->
                     <Border Background="Gray" Margin="2" CornerRadius="2" Height="25" Width="700">
                         <TextBlock Text="CONTENTS OF THE FILE" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="TimesNewRoman" FontStyle="Italic" />
                     </Border>
-
                     <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="2" Margin="2" Width="700" Height="260">
                         <TextBox HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" 
-                                 Margin="2" Width="690" Height="300" TextWrapping="Wrap" Name="FileContentsDisplayBox" >
+                                 Margin="2" Width="690" Height="250" TextWrapping="Wrap" Name="FileContentsDisplayBox" >
                         </TextBox>
                     </Border>
+
+                    <!--Intermediate Fault File Display Area-->
+                    <Border Background="Gray" Margin="2" CornerRadius="2" Height="25" Width="700">
+                        <TextBlock Name="FaultDisplayHeader" Text="FAULT INPUTS" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="TimesNewRoman" FontStyle="Italic" />
+                    </Border>
+                    <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="2" Margin="2" Width="700" Height="180">
+                        <TextBox HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" 
+                                 Margin="2" Width="690" Height="170" TextWrapping="Wrap" Name="IntermediateFaultFileDisplay" >
+                        </TextBox>
+                    </Border>
+
                 </StackPanel>
             </Border>
 
             <Border>
-                
+                <StackPanel>
+                    <!--Input File Area-->
+                    <Border Background="Gray" Margin="2" CornerRadius="2" Height="25" Width="335">
+                        <TextBlock Text="INPUT STRING" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="TimesNewRoman" FontStyle="Italic" />
+                    </Border>
+                    <Border BorderBrush="Gray" BorderThickness="1" CornerRadius="2" Margin="2" Width="335" Height="30">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBox Margin="2" Width="260" Name="OutputStringTextBox" ></TextBox>
+                            <Button Margin="2" Width="65" Content="RUN" Click="RunButton_Click"></Button>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
             </Border>
         </StackPanel>
     </Border>

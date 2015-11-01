@@ -95,6 +95,12 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Deductive-Fault-Simulator-BusinessLogic\Deductive-Fault-Simulator-BusinessLogic.csproj">
+      <Project>{171889bd-3ada-483b-bb10-87dfb5be2d7f}</Project>
+      <Name>Deductive-Fault-Simulator-BusinessLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
