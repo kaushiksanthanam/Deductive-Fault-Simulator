@@ -111,6 +111,25 @@ namespace Deductive_Fault_Simulator_BusinessLogic
             return outputs;
         }
 
+        /// <summary>
+        /// Writes the list of gate faults to the specified file
+        /// </summary>
+        /// <param name="fullFilePath">full path of the file</param>
+        /// <param name="faultList">List of faults to be written</param>
+        public static string WriteGateFaultsToFile(string fullFilePath, List<IntermediateGateFault> faultList)
+        {
+            string outputText = "Net_No" + "\t" + "Stuck-at-value" + "\n";
+
+            foreach(IntermediateGateFault fault in faultList)
+            {
+                string faultLine = fault.net_no + "\t" + fault.stuck_at_fault;
+                outputText = outputText + faultLine + "\n";
+            }
+
+            File.WriteAllText(fullFilePath, outputText);
+            return outputText;
+        }
+
         #endregion
     }
 }

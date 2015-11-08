@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Enums.cs" />
     <Compile Include="FileReader.cs" />
+    <Compile Include="IntermediateGateFault.cs" />
     <Compile Include="LogicRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
